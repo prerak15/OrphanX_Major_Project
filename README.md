@@ -44,7 +44,7 @@ Database : ![SQLite3](https://img.shields.io/badge/-SQLite3-000?&logo=sqlite&log
     <li>$ django-admin startapp appName<li>
     <li>Run in Local Host : $ python3 manage.py runserver</li>
     <li>Visit : http://localhost:8000/ </li>
-    <hr>
+    <hr><hr>
     [NOTE] : Download the model !
     <li>Download : https://drive.google.com/file/d/18my9j2Lc0Djf-kuvSOJVImOvxPyNd-sZ/view?usp=share_link </li>
     <hr>
