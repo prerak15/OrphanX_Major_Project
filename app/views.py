@@ -30,6 +30,7 @@ def handle_file_upload_parent(request):
         with open(os.path.join(data_dir, Father.name), 'wb') as f:
             for chunk in Father.chunks():
                 f.write(chunk)
+        with open(os.path.join(data_dir, Mother.name), 'wb') as f:
             for chunk in Mother.chunks():
                 f.write(chunk)
         images = glob("static\\" + "*.jpg")
