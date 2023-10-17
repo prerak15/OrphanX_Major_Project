@@ -55,7 +55,7 @@ Database : ![SQLite3](https://img.shields.io/badge/-SQLite3-000?&logo=sqlite&log
 
 <br>
 
-This Project is a part of KiiT University Major Project (7-Sem). Under the guidance of [AJIT PASAYAT](https://www.linkedin.com/in/ajit-pasayat-41034165/) Submitted by <br> 
+This Project is a part of KiiT University Major Project (7-Sem). Under the guidance of [AJIT PASAYAT](https://www.linkedin.com/in/ajit-pasayat-41034165/) Submitted by <br>  
 [Soham Samanta](https://www.linkedin.com/in/soham-samanta2000/) <br> 
 [Prerak Gupta](https://www.linkedin.com/in/prerakgpa/) <br> 
 [Nyaasha Patwari](https://www.linkedin.com/in/nyaashapatwari18/) <br> 
