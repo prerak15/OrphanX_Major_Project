@@ -206,9 +206,10 @@ footer p {
         <div class="input-tab">
             <form method="post" enctype="multipart/form-data" action=" {% url 'file_upload_parent' %} ">
               {% csrf_token %}
-              <input type="file" name="csv-file">
+              <input type="file" name="Father">
               <br>
-              
+              <input type="file" name="Mother">
+              <br>              
               <button type="submit">Upload</button>
           </form>
         </div>

@@ -6,7 +6,7 @@ import numpy as np
 import cv2
 from keras_vggface.utils import preprocess_input
 
-def process(img1, img2):
+def process(img1, img2, img3):
     model = load_model('ml/input/vgg_face.h5')
     #model.summary()
     test_path_p = "parent/"
@@ -19,10 +19,13 @@ def process(img1, img2):
     X1 = test_path_p + img1
     X1 = np.array([read_img(X1)])
 
-    X2 = test_path_c + img2
+    X2 = test_path_p + img2
     X2 = np.array([read_img(X2)])
+    
+    X3 = test_path_c + img3
+    X3 = np.array([read_img(X3)])
 
-    pred = model.predict([X1, X2])
+    pred = model.predict([X1, X2, X3])
     return pred
     """
 face00443 child chinese

@@ -21,13 +21,16 @@ def formpageC(req):
     return render(req,'formChild.html')
 
 def handle_file_upload_parent(request):
-    if request.method == 'POST' and 'csv-file' in request.FILES:
-        csv_file = request.FILES['csv-file']
+    if request.method == 'POST' and 'Father' in request.FILES and 'Mother' in request.Files:
+        Father = request.FILES['Father']
+        Mother = request.FILES['Mother']
         data_dir = os.path.join(settings.BASE_DIR, 'parent')
         if not os.path.exists(data_dir):
             os.makedirs(data_dir)
-        with open(os.path.join(data_dir, csv_file.name), 'wb') as f:
-            for chunk in csv_file.chunks():
+        with open(os.path.join(data_dir, Father.name), 'wb') as f:
+            for chunk in Father.chunks():
+                f.write(chunk)
+            for chunk in Mother.chunks():
                 f.write(chunk)
         images = glob("static\\" + "*.jpg")
         images_final = []
@@ -36,7 +39,7 @@ def handle_file_upload_parent(request):
         df = pd.read_csv(csv_path)
         details_final = []
         for i in images:
-            score = process(csv_file.name[-13:],i[-13:])
+            score = process(Father.name[-13:], Mother.name[-13:], i[-13:])
             print(score, i)
             if score >= 0.75:
                 images_final.append('\\'+i)
