@@ -21,7 +21,7 @@ def formpageC(req):
     return render(req,'formChild.html')
 
 def handle_file_upload_parent(request):
-    if request.method == 'POST' and 'Father' in request.FILES and 'Mother' in request.Files:
+    if request.method == 'POST' and 'Father' in request.FILES and 'Mother' in request.FILES:
         Father = request.FILES['Father']
         Mother = request.FILES['Mother']
         data_dir = os.path.join(settings.BASE_DIR, 'parent')
