@@ -44,7 +44,7 @@ Database : ![SQLite3](https://img.shields.io/badge/-SQLite3-000?&logo=sqlite&log
     <li>$ django-admin startapp appName<li>
     <li>Run in Local Host : $ python3 manage.py runserver</li>
     <li>Visit : http://localhost:8000/ </li>
-    <hr>
+    <hr><hr>
     [NOTE] : Download the model !
     <li>Download : https://drive.google.com/file/d/18my9j2Lc0Djf-kuvSOJVImOvxPyNd-sZ/view?usp=share_link </li>
     <hr>
@@ -55,8 +55,9 @@ Database : ![SQLite3](https://img.shields.io/badge/-SQLite3-000?&logo=sqlite&log
 
 <br>
 
-This Project is a part of KiiT University Minor Project (6-Sem). Submitted by <br> 
+This Project is a part of KiiT University Major Project (7-Sem). Under the guidance of [AJIT PASAYAT](https://www.linkedin.com/in/ajit-pasayat-41034165/) Submitted by <br>  
 [Soham Samanta](https://www.linkedin.com/in/soham-samanta2000/) <br> 
 [Prerak Gupta](https://www.linkedin.com/in/prerakgpa/) <br> 
 [Nyaasha Patwari](https://www.linkedin.com/in/nyaashapatwari18/) <br> 
 [Diksha Pranjali](https://www.linkedin.com/in/diksha-pranjali2407/) <br> 
+[Neelima Paul](https://www.linkedin.com/in/neelimapaul385/) <br> 
