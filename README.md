@@ -46,7 +46,7 @@ Database : ![SQLite3](https://img.shields.io/badge/-SQLite3-000?&logo=sqlite&log
     <li>Visit : http://localhost:8000/ </li>
     <hr><hr>
     [NOTE] : Download the model !
-    <li>Download : https://drive.google.com/file/d/18my9j2Lc0Djf-kuvSOJVImOvxPyNd-sZ/view?usp=share_link </li>
+    <li>Download : https://drive.google.com/file/d/1Ice1kttm-9yo6_H8J2alRwf6tqvUfLz0/view?usp=sharing </li>
     <hr>
 
 </ul>
