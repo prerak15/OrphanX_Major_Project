@@ -41,7 +41,7 @@ Database : ![SQLite3](https://img.shields.io/badge/-SQLite3-000?&logo=sqlite&log
     <li>$ django-admin</li>
     <li>$ django-admin startproject projectName</li>
     <li>$ cd projectName</li> 
-    <li>$ django-admin startapp appName<li>
+    <li>$ django-admin startapp appName</li>
     <li>Run in Local Host : $ python3 manage.py runserver</li>
     <li>Visit : http://localhost:8000/ </li>
     <hr>
