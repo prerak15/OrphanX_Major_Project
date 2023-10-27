@@ -44,13 +44,10 @@ Database : ![SQLite3](https://img.shields.io/badge/-SQLite3-000?&logo=sqlite&log
     <li>$ django-admin startapp appName<li>
     <li>Run in Local Host : $ python3 manage.py runserver</li>
     <li>Visit : http://localhost:8000/ </li>
-
     <hr>
-
     [NOTE] : Download the ML model !
     <li>Download : https://drive.google.com/file/d/1Ice1kttm-9yo6_H8J2alRwf6tqvUfLz0/view?usp=sharing </li>
     <hr>
-
 </ul>
 
 [NOTE] All commands preceeding $ are to be executed in Terminal. <br> These instruction are specially made for MacOS. <br>
