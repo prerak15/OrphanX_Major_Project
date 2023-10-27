@@ -1,0 +1,130 @@
+/* Reset some default styles */
+html, body, ul, li, p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  
+  /* Set a background color for the body */
+  body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 20px;
+  }
+  
+  /* Style the header */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  /* Style the navigation menu */
+  nav {
+    background-color: #444;
+  }
+  
+  nav ul {
+    list-style-type: none;
+  }
+  
+  nav li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  /* Style the main content */
+  main {
+    margin: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style headings */
+  h1 {
+    font-size: 36px;
+    color: #333;
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: #444;
+  }
+  
+  /* Style paragraphs */
+  p {
+    margin-bottom: 20px;
+  }
+  
+  /* Style links */
+  a {
+    color: #0074d9;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Style buttons */
+  .button {
+    background-color: #0074d9;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #0056a4;
+  }
+  
+  /* Style a form */
+  form {
+    margin: 20px 0;
+  }
+  
+  input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  input[type="submit"] {
+    background-color: #0074d9;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Add some responsive styles */
+  @media (max-width: 768px) {
+    header {
+      padding: 10px;
+    }
+  
+    nav li {
+      display: block;
+      margin: 10px 0;
+    }
+  }
+  
+  /* Add more CSS rules here... */
+  
