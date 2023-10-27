@@ -44,8 +44,10 @@ Database : ![SQLite3](https://img.shields.io/badge/-SQLite3-000?&logo=sqlite&log
     <li>$ django-admin startapp appName<li>
     <li>Run in Local Host : $ python3 manage.py runserver</li>
     <li>Visit : http://localhost:8000/ </li>
-    <hr><hr>
-    [NOTE] : Download the model !
+
+    <hr>
+
+    [NOTE] : Download the ML model !
     <li>Download : https://drive.google.com/file/d/1Ice1kttm-9yo6_H8J2alRwf6tqvUfLz0/view?usp=sharing </li>
     <hr>
 
@@ -56,8 +58,14 @@ Database : ![SQLite3](https://img.shields.io/badge/-SQLite3-000?&logo=sqlite&log
 <br>
 
 This Project is a part of KiiT University Major Project (7-Sem). Under the guidance of [AJIT PASAYAT](https://www.linkedin.com/in/ajit-pasayat-41034165/) Submitted by <br>  
-[Soham Samanta](https://www.linkedin.com/in/soham-samanta2000/) <br> 
-[Prerak Gupta](https://www.linkedin.com/in/prerakgpa/) <br> 
-[Nyaasha Patwari](https://www.linkedin.com/in/nyaashapatwari18/) <br> 
-[Diksha Pranjali](https://www.linkedin.com/in/diksha-pranjali2407/) <br> 
-[Neelima Paul](https://www.linkedin.com/in/neelimapaul385/) <br> 
+
+
+![LinkedIN](https://img.shields.io/badge/-000?&logo=Linkedin&logoColor=blue)[Soham Samanta](https://www.linkedin.com/in/soham-samanta2000/) <br> 
+
+![LinkedIN](https://img.shields.io/badge/-000?&logo=Linkedin&logoColor=blue)[Prerak Gupta](https://www.linkedin.com/in/prerakgpa/) <br> 
+
+![LinkedIN](https://img.shields.io/badge/-000?&logo=Linkedin&logoColor=blue)[Nyaasha Patwari](https://www.linkedin.com/in/nyaashapatwari18/) <br> 
+
+![LinkedIN](https://img.shields.io/badge/-000?&logo=Linkedin&logoColor=blue)[Diksha Pranjali](https://www.linkedin.com/in/diksha-pranjali2407/) <br> 
+
+![LinkedIN](https://img.shields.io/badge/-000?&logo=Linkedin&logoColor=blue)[Neelima Paul](https://www.linkedin.com/in/neelimapaul385/) <br> 
