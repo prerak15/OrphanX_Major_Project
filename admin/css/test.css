@@ -78,20 +78,6 @@ html, body, ul, li, p, h1, h2, h3, h4, h5, h6 {
     text-decoration: underline;
   }
   
-  /* Style buttons */
-  .button {
-    background-color: #0074d9;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .button:hover {
-    background-color: #0056a4;
-  }
-  
   /* Style a form */
   form {
     margin: 20px 0;
