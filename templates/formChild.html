@@ -10,22 +10,48 @@
     <style>
         @import url('https://fonts.googleapis.com/css?family=Abel');
 
-body, html {
-  color: #fff;
-  font-family: 'Abel', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
+        body{
+          {% comment %} color: #fff; {% endcomment %}
+          {% comment %} font-family: 'Abel', sans-serif; {% endcomment %}
+          margin: 0;
+          {% comment %} padding: 0; {% endcomment %}
+          background: #000000;
+          color: #ffffff;
+          
+        }
+
+/* CSS for header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  {% comment %} background-color: #f5f5f5; {% endcomment %}
+  background: linear-gradient(to bottom, #000000);
 }
 
-body {
-  font-size: 1.2em;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://n5a7d2f2.stackpathcdn.com/wp-content/uploads/2018/10/childrens-expectations-760x399.png) center no-repeat fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -ms-background-size: cover;
-  background-size: cover;
+.header .logo {
+  font-size: 30px;
+  font-family: 'Manifold CF Utilitarian';
+  color: #FFFFFF;
+  text-decoration: none;
+  margin-left: 30px;
+
 }
+
+.nav-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  {% comment %} background-color: #f5f5f5; {% endcomment %}
+  margin-right: 20px;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: #FFFFFF;
+  padding: 35px 20px;
+}
+
 
 .text-box {
   background-color: rgba(18, 70, 119, 0.8);
@@ -60,15 +86,41 @@ hr {
   width: 70%;
   margin: 10px auto;
 }
+/* CSS for main element */
 
-.container {
-  background-color: rgba(22, 160, 133,0.7);
-  border-radius: 20px;
-  margin: auto;
-  width: 90%;
-  padding: 1em;
-  
+.intro {
+  display: flex;
+      flex-direction: left;
+      justify-content: left;
+      align-items: left;
+      width: 100%;
+      height: auto;
+      background: linear-gradient(to bottom, #000000, #03032f, #05052b);
+      z-index: 1;
 }
+
+.dot-pattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+
+}
+
+.dot {
+  position: absolute;
+  background-color: white;
+  width: 5px; /* Adjust the size of the dots */
+  height: 5px; /* Adjust the size of the dots */
+  border-radius: 50%;
+  z-index: 0;
+
+}
+
 
 #survey-form {
   margin: 0 auto;
@@ -89,6 +141,7 @@ hr {
   text-align: left;
   width: 50%;
   margin-left: 10px;
+  z-index: 2;
 }
 
 .input-field {
@@ -101,15 +154,21 @@ hr {
   font-family: inherit;
   font-size: 15px;
   font-weight: bold;
+  z-index: 3;
 }
+
 
 ::-webkit-input-placeholder {
   font-style: italic;
   font-weight: 300;
+  z-index: 4;
 }
 
 input {
-  margin: 7px;
+  margin-top: 18px;
+  margin-left: 20px;
+  z-index: 5;
+  {% comment %} align-top: 10px; {% endcomment %}
 }
 
 #dropdown {
@@ -120,11 +179,13 @@ input {
   border-radius: 3px;
   font-family: inherit;
   font-size: 15px;
+  z-index: 6;
 }
 .btn {
   width: 100%;
   text-align: center;
   margin: 20px;
+  z-index: 7;
 }
 
 button {
@@ -136,73 +197,151 @@ button {
   font-family: inherit;
   padding: 10px 15px;
   border: 1px solid;
+  z-index: 8;
+  margin-left: 650px;
 }
 
 button:hover {
   background-color: #bf6516;
+  z-index: 9;
+  margin-left: 650px;
 }
 
-footer {
-  text-align: center;
-  font-size: 17px;
-  margin: 20px;
-}
 
-footer a {
-  color: #f39c12;
+/* CSS For Footer */
+.footer-section {
+  background: linear-gradient(to bottom, #05052b, #07072a, #0a0a52);
   position: relative;
-  text-decoration: none;
-  font-weight: bold;
+}
+.footer-cta {
+  border-bottom: 1px solid #373636;
 }
 
-footer a:hover {
-  color: #f1c40f;
+.footer-social-icon span {
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
 }
-
-footer p {
+.footer-social-icon a {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 15px;
+  margin-left: 10px;
+  float: right;
+}
+.footer-social-icon i {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+}
+.facebook-bg{
+  background: #3B5998;
+}
+.twitter-bg{
+  background: #55ACEE;
+}
+.google-bg{
+  background: #DD4B39;
+}
+.footer-widget-heading h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  position: relative;
+}
+.footer-widget-heading h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 50px;
+  background: #ff5e14;
+}
+.footer-widget ul li {
+  display: inline-block;
+  width: 50%;
+  margin-bottom: 12px;
+}
+.footer-widget ul li a:hover{
+  color: #ff5e14;
+}
+.footer-widget ul li a {
+  color: #878787;
+  text-transform: capitalize;
+}
+.copyright-area{
+  background: linear-gradient(to bottom, #07072a, #000000);
+  padding: 25px 0;
+}
+.copyright-text p {
   margin: 0;
-  font-size: 17px;
+  font-size: 14px;
+  color: #878787;
+  margin-right: 10px;
+  float: right;
+}
+.copyright-text p a{
+  color: #ff5e14;
+
+}
+.footer-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer-menu li:hover a{
+  color: #ff5e14;
+}
+.footer-menu li a {
+  font-size: 14px;
+  color: #878787;
 }
 
-@media only screen and (max-width: 768px) {
-  body{
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://wallpapercave.com/wp/Fdh76FQ.jpg) center no-repeat fixed;
-  background-size: cover;
-}
-  
-  h1 {
-    font-size: 2em;
-  }
-  
-  .labels {
-    width: 100%;
-    text-align: left;
-  }
-  .input-tab {
-    width: 100%;
-    float: left;
-    margin-left: -10px;
-  }
-  .input-field {
-    width: 100%;
-  }
-  select {
-    width: 100%;
-  }
-  .btn {
-    width: 100%;
-    margin: auto;
-  }
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  border: 2px solid white;
+  border-radius: 20px;
 }
 
     </style>
 </head>
-<header>
-    <div class="text-box">
-        <h1 id="title">Welcome To OrphanX!-Child</h1>
-    </div>
-</header>
-<div class="container">
+
+<body>
+  <header class="header">
+    <a href="/home" class="logo">OrphanX</a>
+    <nav class="nav-items">
+      <a href="/home">Home</a>
+      <a href="/admin">Admin</a>
+    </nav>
+  </header>
+  <main>
+  <div class="intro">
+
+  <div class="dot-pattern" id="dot-pattern"></div>
+        <!-- Your page content goes here -->
+    
+        <script>
+            const dotPattern = document.getElementById('dot-pattern');
+            const numDots = 200; // Adjust the number of dots
+            for (let i = 0; i < numDots; i++) {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                dot.style.top = Math.random() * 100 + 'vh';
+                dot.style.left = Math.random() * 100 + 'vw';
+                dotPattern.appendChild(dot);
+            }
+        </script>
+
   <div class="input-tab">
     <form method="post" enctype="multipart/form-data" action=" {% url 'file_upload_child' %} ">
       {% csrf_token %}
@@ -296,13 +435,41 @@ footer p {
   </div>
 </div>
 
-<footer>
-    <div class="contact">
-        <a href="https://github.com/linh4" target="_blank">
-            <span class="icon"><i class="fa fa-github"></i></span></a>
-        <a href="https://codepen.io/linh4/" target="_blank">
-            <span class="icon"><i class="fa fa-codepen"></i></span></a>
-        <a href="https://www.freecodecamp.org/linh4" target="_blank">
-            <span class="icon"><i class="fa fa-free-code-camp"></i></span></a>
-    </div>
+</main>
+</body>
+<footer class="footer-section">
+  <div class="footer-social-icon">
+    <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+    <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+    <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+  </div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div class="copyright-area">
+<div class="container">
+<div class="row">
+<div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+<div class="footer-menu">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Terms</a></li>
+    <li><a href="#">Privacy</a></li>
+    <li><a href="#">Policy</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</div>
+</div>
+<div class="col-xl-6 col-lg-6 text-center text-lg-left">
+<div class="copyright-text">
+  <p>Copyright &copy; 2023, All Right Reserved <a href="https://github.com/soham-samanta/Orphan.AI">OrphanX</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </footer>
+</html>

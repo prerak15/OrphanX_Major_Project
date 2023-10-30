@@ -19,6 +19,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR,'templates')
 STATIC_DIR = os.path.join(BASE_DIR,'static')
 MEDIA_DIR = os.path.join(BASE_DIR,'media')
 CHILD_DIR = os.path.join(BASE_DIR, 'child')
+LANDING_DIR = os.path.join(BASE_DIR, 'landing_static')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -130,6 +131,12 @@ MEDIA_URL = '/media/'
 
 CHILD_ROOT = CHILD_DIR
 CHILD_URL = '/child/'
+
+LANDING_URL = 'landing_static/'
+LANDING_ROOT = LANDING_DIR
+LANDING_DIRS = [
+    LANDING_DIR,  
+]
 
 
 # Default primary key field type

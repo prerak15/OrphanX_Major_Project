@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+{% load static %}
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,6 +17,9 @@
     body {
       margin: 0;
       box-sizing: border-box;
+      background: #000000;
+      color: #ffffff;
+
     }
 
     /* CSS for header */
@@ -24,13 +27,14 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: #f5f5f5;
+      {% comment %} background-color: #f5f5f5; {% endcomment %}
+      background: linear-gradient(to bottom, #000000);
     }
 
     .header .logo {
-      font-size: 25px;
-      font-family: 'Sriracha', cursive;
-      color: #000;
+      font-size: 30px;
+      font-family: 'Manifold CF Utilitarian';
+      color: #FFFFFF;
       text-decoration: none;
       margin-left: 30px;
     }
@@ -39,13 +43,13 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      background-color: #f5f5f5;
+      {% comment %} background-color: #f5f5f5; {% endcomment %}
       margin-right: 20px;
     }
 
     .nav-items a {
       text-decoration: none;
-      color: #000;
+      color: #FFFFFF;
       padding: 35px 20px;
     }
 
@@ -57,7 +61,13 @@
       align-items: center;
       width: 100%;
       height: 520px;
+      background: linear-gradient(to bottom, #000000, #03032f, #05052b);
+
     }
+    .intro a {
+      text-decoration: none;
+      color: #FFFFFF;
+}
 
     .intro h1 {
       font-family: sans-serif;
@@ -75,20 +85,65 @@
       margin: 20px 0;
     }
 
+    .container {
+      display: flex;
+    }
+
+    .box {
+      width: 200px;
+      height: 60px;
+      border-radius: 20px;
+      margin: 20px;
+      border: 2px solid white;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      {% comment %} background-color: #FFFFFF; /* Change this to the desired color */ {% endcomment %}
+    }
+
+    .box img {
+      position: absolute;
+      width: 100px; /* Adjust the width of the image */
+      height: 80px; /* Adjust the height of the image */
+      bottom: 100px; /* Adjust the distance from the bottom */
+  }
+
     .intro button {
-      background-color: #5edaf0;
-      color: #000;
+      background-color: transparent;
+      font-color: #FFFFFF;
+      border: 2px solid white;
+      margin-bottom: 10px;
       padding: 10px 25px;
       border: none;
       border-radius: 5px;
       font-size: 20px;
       font-weight: bold;
       cursor: pointer;
-      box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4)
+      {% comment %} box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4) {% endcomment %}
     }
+
+    .dot-pattern {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+  }
+
+  .dot {
+      position: absolute;
+      background-color: white;
+      width: 5px; /* Adjust the size of the dots */
+      height: 5px; /* Adjust the size of the dots */
+      border-radius: 50%;
+  }
+
     /* CSS For Footer */
 .footer-section {
-  background: #000000;
+  background: linear-gradient(to bottom, #05052b, #07072a, #0a0a52);
   position: relative;
 }
 .footer-cta {
@@ -107,6 +162,8 @@
   color: #fff;
   font-size: 16px;
   margin-right: 15px;
+  margin-left: 10px;
+  float: right;
 }
 .footer-social-icon i {
   height: 40px;
@@ -153,16 +210,19 @@
   text-transform: capitalize;
 }
 .copyright-area{
-  background: #202020;
+  background: linear-gradient(to bottom, #07072a, #000000);
   padding: 25px 0;
 }
 .copyright-text p {
   margin: 0;
   font-size: 14px;
   color: #878787;
+  margin-right: 10px;
+  float: right;
 }
 .copyright-text p a{
   color: #ff5e14;
+
 }
 .footer-menu li {
   display: inline-block;
@@ -175,11 +235,11 @@
   font-size: 14px;
   color: #878787;
 }
-.intro{
-        background-image: url("https://img.buzzfeed.com/buzzfeed-static/static/2023-02/1/3/asset/4512ce16c1ea/sub-buzz-1626-1675221020-32.jpg?resize=990:660");
+{% comment %} .intro{ {% endcomment %}
+        {% comment %} background-image: url("https://img.buzzfeed.com/buzzfeed-static/static/2023-02/1/3/asset/4512ce16c1ea/sub-buzz-1626-1675221020-32.jpg?resize=990:660"); {% endcomment %}
         {% comment %} background-repeat: no-repeat; {% endcomment %}
-        background-size: auto;
-    }
+        {% comment %} background-size: auto; {% endcomment %}
+    {% comment %} } {% endcomment %}
   </style>
   </head>
   
@@ -193,15 +253,41 @@
     </header>
     <main>
       <div class="intro">
-        <h1>Building a Happy Family</h1>
-        <p>We believe in connecting lives</p>
-        <button>
+        <div class="dot-pattern" id="dot-pattern"></div>
+        <!-- Your page content goes here -->
+    
+        <script>
+            const dotPattern = document.getElementById('dot-pattern');
+            const numDots = 200; // Adjust the number of dots
+            for (let i = 0; i < numDots; i++) {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                dot.style.top = Math.random() * 100 + 'vh';
+                dot.style.left = Math.random() * 100 + 'vw';
+                dotPattern.appendChild(dot);
+            }
+        </script>
+        <div class="container">
+          <div class="box">
+            {% comment %} <div class="dot-pattern"></div> {% endcomment %}
+            <button>
+              <a href="/formParent"> Sign In Parent</a>
+            </button>
+          </div>
+          <div class="box">
+            <button>
+              <a href="/formChild"> Sign In Child</a>
+            </button>
+          </div>
+      </div>
+
+        {% comment %} <button>
           <a href="/formParent"> Sign In Parent</a>
         </button>
         <br>
         <button>
           <a href="/formChild"> Sign In Child</a>
-        </button>
+        </button> {% endcomment %}
       </div>
     </main>
   <footer class="footer-section">
@@ -212,18 +298,13 @@
               </div>
             </div>
           </div>
-         
+        
         </div>
       </div>
     </div>
     <div class="copyright-area">
       <div class="container">
         <div class="row">
-          <div class="col-xl-6 col-lg-6 text-center text-lg-left">
-            <div class="copyright-text">
-              <p>Copyright &copy; 2023, All Right Reserved <a href="https://github.com/soham-samanta/Orphan.AI">OrphanX</a></p>
-            </div>
-          </div>
           <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
             <div class="footer-menu">
               <ul>
@@ -233,6 +314,11 @@
                 <li><a href="#">Policy</a></li>
                 <li><a href="#">Contact</a></li>
               </ul>
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+            <div class="copyright-text">
+              <p>Copyright &copy; 2023, All Right Reserved <a href="https://github.com/soham-samanta/Orphan.AI">OrphanX</a></p>
             </div>
           </div>
         </div>
