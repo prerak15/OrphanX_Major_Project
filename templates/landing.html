@@ -16,7 +16,7 @@
 
     body {
       margin: 0;
-      box-sizing: border-box;
+      {% comment %} box-sizing: border-box; {% endcomment %}
       background: #000000;
       color: #ffffff;
 
@@ -38,7 +38,6 @@
       text-decoration: none;
       margin-left: 30px;
     }
-    .h1
 
     .nav-items {
       display: flex;
@@ -263,8 +262,8 @@ h2 {
     <header class="header">
       <a href="#" class="logo">OrphanX</a>
       <nav class="nav-items">
-        <a href="#">Home</a>
-        <a href="/admin">Admin</a>
+      <a href="#">Home</a>
+      <a href="/admin">Admin</a>
       </nav>
     </header>
     <main>
@@ -272,23 +271,22 @@ h2 {
       <h2>WE BELIEVE IN CONNECTING LIVES</h2>
       {% comment %} <img src="\media\download.png" alt="Description of the image", style="background-color: transparent;"> {% endcomment %}
       <div class="intro">
-        <div class="dot-pattern" id="dot-pattern"></div>
-        <!-- Your page content goes here -->
-    
+        <div class="dot-pattern" id="dot-pattern">
+        </div>
+
         <script>
-            const dotPattern = document.getElementById('dot-pattern');
-            const numDots = 200; // Adjust the number of dots
-            for (let i = 0; i < numDots; i++) {
-                const dot = document.createElement('div');
-                dot.classList.add('dot');
-                dot.style.top = Math.random() * 100 + 'vh';
-                dot.style.left = Math.random() * 100 + 'vw';
-                dotPattern.appendChild(dot);
-            }
+          const dotPattern = document.getElementById('dot-pattern');
+          const numDots = 200; // Adjust the number of dots
+          for (let i = 0; i < numDots; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            dot.style.top = Math.random() * 100 + 'vh';
+            dot.style.left = Math.random() * 100 + 'vw';
+            dotPattern.appendChild(dot);
+          }
         </script>
         <div class="container">
           <div class="box">
-            {% comment %} <div class="dot-pattern"></div> {% endcomment %}
             <button>
               <a href="/formParent"> Sign In Parent</a>
             </button>
@@ -298,51 +296,40 @@ h2 {
               <a href="/formChild"> Sign In Child</a>
             </button>
           </div>
-      </div>
-
-        {% comment %} <button>
-          <a href="/formParent"> Sign In Parent</a>
-        </button>
-        <br>
-        <button>
-          <a href="/formChild"> Sign In Child</a>
-        </button> {% endcomment %}
+        </div>
       </div>
     </main>
-  <footer class="footer-section">
-              <div class="footer-social-icon">
-                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
-                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
-                <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+
+
+    <footer class="footer-section">
+      <div class="footer-social-icon">
+        <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+        <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+        <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+      </div>
+
+      <div class="copyright-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+              <div class="footer-menu">
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Terms</a></li>
+                  <li><a href="#">Privacy</a></li>
+                  <li><a href="#">Policy</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+              <div class="copyright-text">
+                <p>Copyright &copy; 2023, All Right Reserved <a href="https://github.com/soham-samanta/Orphan.AI">OrphanX</a></p>
               </div>
             </div>
           </div>
-        
         </div>
       </div>
-    </div>
-    <div class="copyright-area">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
-            <div class="footer-menu">
-              <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Terms</a></li>
-                <li><a href="#">Privacy</a></li>
-                <li><a href="#">Policy</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-xl-6 col-lg-6 text-center text-lg-left">
-            <div class="copyright-text">
-              <p>Copyright &copy; 2023, All Right Reserved <a href="https://github.com/soham-samanta/Orphan.AI">OrphanX</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
+    </footer>
+  </body>
 </html>
